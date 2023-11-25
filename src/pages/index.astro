@@ -1,0 +1,61 @@
+---
+import Card from '../components/Card.astro'
+import Challenge1 from '../images/challenge-1.webp'
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main class="container mx-auto py-8 flex flex-col gap-y-8">
+      <h1 class="text-6xl text-center font-bold font-dancing">
+        Daily challenges
+      </h1>
+      <p class="text-center">
+        This is a collection of daily challenges I've done. I've started doing
+        these 11/24/2023 to improve my skills and to learn new things. The
+        challenges are from <a
+          href="https://www.webdevdaily.io/challenges"
+          class="text-blue-600 hover:underline"
+          >Daily Challenges</a
+        >.
+      </p>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-8"
+      >
+        <Card
+          title="Black Friday Hero"
+          href="/black-friday-hero-day-1"
+          image={Challenge1}
+          num={1}
+        />
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;700&display=swap');
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+</style>
